@@ -1,6 +1,8 @@
 # Documentación para el Web Scraper
 
-Esta documentación explica la funcionalidad y los detalles de implementación del Web Scraper basado en Python escrito para la empresa Analitic durante la primera práctica universitaria de Eliseo Guarda Cortés. El Web Scraper está diseñado para extraer artículos de noticias de varios sitios web y guardar los datos recopilados en un archivo CSV para fácil visualización.
+Esta documentación explica la funcionalidad y los detalles de implementación del Web Scraper basado en Python escrito para la empresa Analitic durante la primera práctica universitaria de Eliseo Guarda Cortés.
+
+El Web Scraper está diseñado para extraer artículos de noticias de varios sitios web y guardar los datos recopilados en un archivo CSV para fácil visualización.
 
 ## Tabla de contenido
 - [Descripción general](#descripción-general)
