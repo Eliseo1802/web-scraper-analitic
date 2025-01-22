@@ -10,7 +10,7 @@ import re
 
 # Constantes.
 MAX_QUERY_INPUT = 100 # Cantidad de caracteres máximos permitidos.
-MAX_NEWS_PER_SITE = 1000 # Cantidad de noticias máximas por sitio web.
+MAX_NEWS_PER_SITE = 10000 # Cantidad de noticias máximas por sitio web.
 MONTH_MAPPING = { # Diccionario de meses para el formateo de fechas.
     "Enero": "01",
     "Febrero": "02",
@@ -123,7 +123,7 @@ class WebScraper:
                         })
                         count += 1 # Aumenta el contador de noticias extraídas.
                         
-                        if len(self.data) % MAX_NEWS_PER_SITE/4 == 0: # Visualizador arbitrario de cuántas noticias lleva, solamente para saber si sigue funcionando.
+                        if len(self.data) % (MAX_NEWS_PER_SITE/4) == 0: # Visualizador arbitrario de cuántas noticias lleva, solamente para saber si sigue funcionando.
                             print(f"{len(self.data)} noticias extraídas...")
                     except Exception:
                         continue
@@ -180,7 +180,7 @@ class WebScraper:
                                 "Website": "BioBioChile"
                             })
                             
-                            if len(self.data) % MAX_NEWS_PER_SITE/4 == 0: # Visualizador arbitrario de cuántas noticias lleva, solamente para saber si sigue funcionando.
+                            if len(self.data) % (MAX_NEWS_PER_SITE/4) == 0: # Visualizador arbitrario de cuántas noticias lleva, solamente para saber si sigue funcionando.
                                 print(f"{len(self.data)} noticias extraídas...")
                             
                             current_count += 1 # Aumenta el contador de noticias extraídas.
@@ -202,7 +202,7 @@ class WebScraper:
                             "Website": "BioBioChile"
                         })
                         
-                        if len(self.data) % MAX_NEWS_PER_SITE/4 == 0: # Visualizador arbitrario de cuántas noticias lleva, solamente para saber si sigue funcionando.
+                        if len(self.data) % (MAX_NEWS_PER_SITE/4) == 0: # Visualizador arbitrario de cuántas noticias lleva, solamente para saber si sigue funcionando.
                             print(f"{len(self.data)} noticias extraídas...")
                         
                         xpath_count += 1 # Aumenta el índice para buscar la siguiente noticia.
@@ -225,7 +225,7 @@ class WebScraper:
         url = "https://www.cooperativa.cl/"
         self.driver.get(url) # Abre el URL.
         print("= = = Entrando a Cooperativa = = =") # Visualizador arbitrario para la consola, solo para saber si está funcionando.
-        time.sleep(10) # Tiene un tiempo más largo debido a que cuando estuve haciendo las pruebas finales el servidor del sitio web estaba bastante lento y le costaba cargar.
+        time.sleep(15) # Tiene un tiempo más largo debido a que cuando estuve haciendo las pruebas finales el servidor del sitio web estaba bastante lento y le costaba cargar.
         # A veces presenta un anuncio pero esperando el tiempo de espera anterior este desaparece.
         
         count = 0 # Contador de noticias extraídas.
@@ -262,7 +262,7 @@ class WebScraper:
                         })
                         count += 1 # Aumenta el contador de noticias extraídas.
                         
-                        if len(self.data) % MAX_NEWS_PER_SITE/4 == 0: # Visualizador arbitrario de cuántas noticias lleva, solamente para saber si sigue funcionando.
+                        if len(self.data) % (MAX_NEWS_PER_SITE/4) == 0: # Visualizador arbitrario de cuántas noticias lleva, solamente para saber si sigue funcionando.
                             print(f"{len(self.data)} noticias extraídas...")
                         
                         if count >= MAX_NEWS_PER_SITE: # Si el contador de noticias sobrepasa el máximo este se detiene.
@@ -325,7 +325,7 @@ class WebScraper:
                 if article_data:
                     self.data.append(article_data) # Se agregan los datos de arriba a la lista de datos extraídos.
                     
-                    if len(self.data) % MAX_NEWS_PER_SITE/4 == 0: # Visualizador arbitrario de cuántas noticias lleva, solamente para saber si sigue funcionando.
+                    if len(self.data) % (MAX_NEWS_PER_SITE/4) == 0: # Visualizador arbitrario de cuántas noticias lleva, solamente para saber si sigue funcionando.
                         print(f"{len(self.data)} noticias extraídas...")
                     
                     count += 1 # Aumenta el contador de noticias extraídas.
